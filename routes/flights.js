@@ -4,7 +4,7 @@ const flightsCtrl = require('../controllers/flights');
 
 
 router.get('/new', flightsCtrl.new) 
-res.send("new flight page");
+router.post('/', flightsCtrl.create)
 
 
 module.exports = router;
