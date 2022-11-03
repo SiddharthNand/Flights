@@ -20,6 +20,10 @@ const flightSchema = new Schema({
     min: '2022-10-31',
     max: '2023-10-31'  
   }, 
-});
+},
+{
+  timestamps: true
+}
+);
 
 module.exports = mongoose.model('Flight', flightSchema);
