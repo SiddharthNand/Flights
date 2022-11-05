@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section> 
+        <div>Airline:</div>
+        <div><%= flight.airline%></div>
+        <div>Airport:</div>
+        <div><%= flight.airport%></div>
+        <div>FlightNo:</div>
+        <div><%= flight.flightNo%></div>
+        <div>Departs:</div>
+        <div><%= flight.departs%></div>
+    </section>
+    <br> 
+    <h2>Destination</h2>
+    <form id="add-destination" method="POST"
+        action="/flights/<%= flight._id %>/destination">
+    <label>Destination</label>
+    <select name="airport">
+        <option value="DEN">DEN</option>
+        <option value="AUS">AUS</option>
+        <option value="DFW">DFW</option>
+        <option value="LAX">LAX</option>
+        <option value="SAN">SAN</option>
+    </select>
+    <label>Arrival:</label>
+        <input type="datetime-local" name="Arrival">
+        <input type="submit" value="Add Destination">
+    </form>
+</body>
+</html>
